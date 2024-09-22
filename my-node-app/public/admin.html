@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - จัดการการจองหนังสือ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>จัดการการจองหนังสือ</h1>
+    <div>
+        <h2>หนังสือ: เล่ม 1</h2>
+        <p id="book-status">สถานะ: ว่าง</p>
+        <button id="unlock-button" onclick="unlockBook()">ปลดล็อคการจอง</button>
+    </div>
+    <hr>
+    <div>
+        <h2>หนังสือ: เล่ม 2</h2>
+        <p id="book-status">สถานะ: ว่าง</p>
+        <button id="unlock-button" onclick="unlockBook()">ปลดล็อคการจอง</button>
+    </div>
+
+
+    <script>
+        function unlockBook() {
+            fetch('/unlock-book/1', { method: 'POST' }) // ปลดล็อคหนังสือ id = 1
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === 'Book unlocked') {
+                        alert('ปลดล็อคหนังสือสำเร็จ');
+                        document.getElementById('book-status').innerText = 'สถานะ: ว่าง';
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

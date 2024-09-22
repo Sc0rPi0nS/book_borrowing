@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.detail-container {
+    display: flex; 
+    align-items: flex-start; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.image-container {
+    flex: 1; 
+    text-align: center; 
+    margin-right: 20px; 
+}
+
+.book-image {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+    flex: 2; 
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.booking-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.booking-button:hover {
+    background-color: #218838;
+}
+
+/* CSS สำหรับ Popup Form */
+.popup-form {
+    display: none; /* ซ่อน Popup ไว้ก่อน */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังแบบโปร่งใส */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* ให้อยู่ด้านบนสุด */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button, .close-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.close-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.close-button:hover {
+    background-color: #c82333;
+}

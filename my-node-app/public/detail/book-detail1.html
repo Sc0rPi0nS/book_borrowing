@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดหนังสือ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="detail-container">
+        <div class="image-container">
+            <img src="../image/book1.jpg" alt="book1" class="book-image">
+            <h2>ชื่อหนังสือ: ทดสอบ</h2>
+        </div>
+        
+        <div class="info-container">
+            <h1>รายละเอียดหนังสือ</h1>
+            <p>นี่คือรายละเอียดของหนังสือที่คุณเลือกจอง...</p>
+            <button class="booking-button" id="booking-button" onclick="openPopup()">จองหนังสือ</button>
+        </div>
+    </div>
+
+    <div id="popupForm" class="popup-form">
+        <div class="form-container">
+            <h2>กรอกข้อมูลการจอง</h2>
+            <label for="fullName">ชื่อ นามสกุล:</label>
+            <input type="text" id="fullName" placeholder="ชื่อ นามสกุล" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" placeholder="example@example.com" required>
+
+            <button class="submit-button" onclick="submitForm()">ยืนยันการจอง</button>
+            <button class="close-button" onclick="closePopup()">ปิด</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
